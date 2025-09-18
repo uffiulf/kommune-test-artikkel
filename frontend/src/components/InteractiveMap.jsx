@@ -60,10 +60,11 @@ const InteractiveMap = ({ incidents }) => {
             {`
               .map-marker {
                 cursor: pointer;
-                transition: all 0.3s ease;
+                transition: r 0.3s ease, fill 0.3s ease;
               }
               .map-marker:hover {
-                transform: scale(1.4);
+                r: 8;
+                fill: #991b1b;
               }
               .marker-pulse {
                 animation: pulse-slow 2s infinite;
