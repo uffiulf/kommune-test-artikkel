@@ -115,6 +115,14 @@ const InteractiveMap = ({ incidents }) => {
                   fill="#b91c1c"
                   className="map-marker marker-blink"
                   onClick={() => setSelectedIncident(incident)}
+                  onMouseEnter={(e) => {
+                    e.target.setAttribute('r', '8');
+                    e.target.setAttribute('fill', '#991b1b');
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.setAttribute('r', '6');
+                    e.target.setAttribute('fill', '#b91c1c');
+                  }}
                 />
                 {/* Location label */}
                 <text
