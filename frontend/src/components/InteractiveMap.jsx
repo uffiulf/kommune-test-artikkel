@@ -126,9 +126,9 @@ const InteractiveMap = ({ incidents }) => {
                 />
                 {/* Location label */}
                 <text
-                  x={incident.x + 15}
+                  x={incident.x + 18}
                   y={incident.y + 5}
-                  fontSize="11"
+                  fontSize="12"
                   fill="#374151"
                   className="font-medium pointer-events-none"
                   style={{ userSelect: 'none' }}
