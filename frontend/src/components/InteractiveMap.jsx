@@ -54,34 +54,75 @@ const InteractiveMap = ({ incidents }) => {
           strokeWidth="1"
         />
 
+        {/* CSS animations */}
+        <defs>
+          <style>
+            {`
+              .map-marker {
+                cursor: pointer;
+                transition: all 0.3s ease;
+              }
+              .map-marker:hover {
+                transform: scale(1.4);
+              }
+              .marker-pulse {
+                animation: pulse-slow 2s infinite;
+              }
+              .marker-blink {
+                animation: blink-slow 3s infinite;
+              }
+              @keyframes pulse-slow {
+                0%, 100% { opacity: 0.3; transform: scale(1); }
+                50% { opacity: 0.1; transform: scale(1.3); }
+              }
+              @keyframes blink-slow {
+                0%, 90% { opacity: 1; }
+                95% { opacity: 0.3; }
+                100% { opacity: 1; }
+              }
+            `}
+          </style>
+        </defs>
+
         {/* Incident markers */}
         {incidents.map((incident, index) => (
           <g key={incident.id}>
             {animatedIncidents.includes(incident.id) && (
               <>
-                {/* Pulsing circle animation */}
+                {/* Outer pulsing circle */}
+                <circle
+                  cx={incident.x}
+                  cy={incident.y}
+                  r="12"
+                  fill="#ef4444"
+                  className="marker-pulse"
+                />
+                {/* Middle pulsing circle */}
                 <circle
                   cx={incident.x}
                   cy={incident.y}
                   r="8"
-                  fill="#ef4444"
-                  opacity="0.3"
-                  className="animate-ping"
+                  fill="#dc2626"
+                  className="marker-pulse"
+                  style={{ animationDelay: '0.5s' }}
                 />
+                {/* Main marker circle */}
                 <circle
                   cx={incident.x}
                   cy={incident.y}
                   r="6"
-                  fill="#dc2626"
-                  className="cursor-pointer hover:fill-red-700 transition-colors"
+                  fill="#b91c1c"
+                  className="map-marker marker-blink"
                   onClick={() => setSelectedIncident(incident)}
                 />
+                {/* Location label */}
                 <text
-                  x={incident.x + 10}
+                  x={incident.x + 15}
                   y={incident.y + 5}
-                  fontSize="10"
+                  fontSize="11"
                   fill="#374151"
-                  className="font-medium"
+                  className="font-medium pointer-events-none"
+                  style={{ userSelect: 'none' }}
                 >
                   {incident.location}
                 </text>
