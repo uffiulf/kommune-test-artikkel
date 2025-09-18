@@ -23,7 +23,7 @@ const InteractiveMap = ({ incidents }) => {
   };
 
   return (
-    <div className="relative w-full h-[600px] rounded-lg overflow-hidden shadow-lg" style={mapStyle}>
+    <div className="relative w-full h-[720px] rounded-lg overflow-hidden shadow-lg" style={mapStyle}>
       {/* Simple SVG Map of Norway region */}
       <svg
         viewBox="0 0 400 300"
