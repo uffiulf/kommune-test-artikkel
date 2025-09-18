@@ -4,8 +4,8 @@ export const fraudIncidents = [
     title: "Falske kommuneansatte lurer eldre kvinner",
     date: "15. mars 2024",
     location: "Sarpsborg, Østfold",
-    x: 250,
-    y: 175,
+    x: 280,
+    y: 170,
     loss: "45 000 kr",
     description: "To menn oppsøkte en 78 år gammel kvinne og utga seg for å være fra kommunen. De hevdet at hun måtte betale for vannreparasjoner som aldri ble utført. Kvinnen overførte penger før hun oppdaget svindelen.",
     method: "Hjemmebesøk med falsk identitet som kommuneansatte"
@@ -15,8 +15,8 @@ export const fraudIncidents = [
     title: "Telefon-svindel rammer pensjonister",
     date: "22. april 2024", 
     location: "Lillestrøm, Akershus",
-    x: 190,
-    y: 125,
+    x: 170,
+    y: 110,
     loss: "32 000 kr",
     description: "En 82 år gammel mann mottok telefon fra personer som utga seg for å være fra kommunens skatteavdeling. De krevde umiddelbar betaling av påståtte restskatter og truet med tvangssalg av boligen.",
     method: "Telefonsvindel med trussel om tvangssalg"
@@ -26,8 +26,8 @@ export const fraudIncidents = [
     title: "Falske takseringsgebyr kreves inn",
     date: "8. mai 2024",
     location: "Fredrikstad, Østfold", 
-    x: 230,
-    y: 185,
+    x: 220,
+    y: 200,
     loss: "28 500 kr",
     description: "Svindlere ringte eldre beboere og påsto at kommunen krevde inn nye takseringsgebyr for eiendom. De oppga falske referansenummer og bankkonto for betaling.",
     method: "Telefonsvindel med falske kommunale avgifter"
@@ -37,8 +37,8 @@ export const fraudIncidents = [
     title: "Renovasjonsgebyr-svindel",
     date: "14. juni 2024",
     location: "Moss, Østfold",
-    x: 180,
-    y: 165,
+    x: 150,
+    y: 160,
     loss: "19 000 kr",
     description: "En gruppe svindlere tok kontakt med flere eldre personer og krevde betaling for påståtte endringer i renovasjonsordningen. De brukte kommunens logo i falske e-poster.",
     method: "E-post og telefon med kommunal logo-misbruk"
